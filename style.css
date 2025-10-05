@@ -1,0 +1,92 @@
+/* 1) Bootstrap 5 CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css");
+
+/* 2) Talayiha Minimal Mobile-Centered Theme */
+
+/* رنگ‌ها و پایه‌ها */
+:root{
+  --gold:#d9b351;
+  --bg-gray:#f3f3f3;   /* رنگ زمینه بیرونی */
+  --fg:#111;
+  --white:#fff;
+  --border:#e4e4e4;
+  --radius:12px;
+}
+
+/* تمام صفحه پس‌زمینه‌ی خاکستری */
+html,body{
+  background:var(--bg-gray);
+  margin:0;
+  padding:0;
+  font-family:"B Traffic","BTraffic","Arial",sans-serif;
+  direction:ltr;
+}
+
+/* کانتینر مرکزی شبیه صفحه موبایل */
+.tl-phone-frame{
+  background:var(--white);
+  max-width:420px;            /* عرض موبایل */
+  min-height:100vh;
+  margin:0 auto;
+  box-shadow:0 0 0 1px var(--border);
+  border-radius:0;
+  padding:20px;
+}
+
+/* داخل فرم‌افزار ممکنه divهای خودش رو بسازه، پس تطبیق عمومی هم بذاریم */
+.container, .container-fluid, .main-content, body > div:first-child{
+  max-width:420px !important;
+  background:var(--white) !important;
+  margin:0 auto !important;
+  padding:20px !important;
+  min-height:100vh !important;
+  box-shadow:0 0 0 1px var(--border);
+}
+
+/* تیترها و متن */
+h1,h2,h3{font-weight:700;color:var(--fg);}
+h1{font-size:22px;margin:8px 0 12px;}
+h2{font-size:18px;margin:6px 0 10px;}
+p{color:#333;line-height:1.7;}
+
+/* لینک‌ها */
+a{text-decoration:none;color:var(--fg);border-bottom:1px solid transparent;}
+a:hover{border-color:var(--gold);}
+
+/* فرم‌ها */
+.form-control, .form-select{
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+}
+.btn-primary{
+  background:var(--gold);
+  border:none;
+  color:#000;
+  font-weight:600;
+  border-radius:var(--radius);
+}
+
+/* جدول‌ها */
+.table{
+  font-size:14px;
+  border-color:var(--border);
+}
+.table thead th{
+  background:#fafafa;
+  font-weight:700;
+}
+
+/* نوتیس‌ها */
+.tl-notice{
+  border-left:4px solid var(--gold);
+  background:#fffdfa;
+  border:1px solid var(--border);
+  padding:10px 14px;
+  border-radius:var(--radius);
+  margin:12px 0;
+}
+
+/* حالت تیره‌ی سیستم (اختیاری) */
+@media (prefers-color-scheme: dark){
+  :root{--bg-gray:#111;--white:#181818;--fg:#f3f3f3;--border:#333;}
+}
